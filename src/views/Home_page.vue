@@ -1,71 +1,47 @@
+
 <template>
+  <section>
     <div class="wrapper">
       <div class="content">
-        <div class="button-inscription">
-          <p>{{titre}}</p>
-          <p>welcome {{prenom}}</p>
-          <a href="https://fr-fr.facebook.com/"><button  type="submit" class="btn-fb" data-toggle="tooltip" data-placement="top" title="Facebook"  matTooltip="facebook"><img src="assets/photos/facebook.png"></button></a>
-          <br>
-          <a href="https://myaccount.google.com/"> <button type="submit" class="btn-go" data-toggle="tooltip" data-placement="top" title="Google"  matTooltip="google"><img src="assets/photos/google.png"></button></a>
-        </div>
-        <form [formGroup]="From" (ngSubmit)="login()">
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <label for="inputEmail4">Email</label>
-              <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
-            </div>
-            <div class="form-group col-md-6">
-              <label for="inputPassword">Password</label>
-              <input type="password" class="form-control" id="inputPassword" placeholder="Password" >
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <label for="inputFName">First Name</label>
-              <input [(ngModel)]="prenom" name ="prenom" type="text" class="form-control"  formControlName="FirstName" id="inputFName" placeholder="first name" formGroupName="FirstName" required>
-            </div>
-            <div class="form-group col-md-6">
-              <label for="inputLName">Last Name</label>
-              <input type="text" class="form-control" formControlName="LastName" id="inputLName" placeholder="first name" formGroupName="LastName" required>
-            </div>
+        <h1>L'application  pour les coureurs et les cyclistes !</h1>
+        <form>
+          <label class="login"><p>connexion</p></label>
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" img="" required>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
           </div>
           <div class="form-group">
-            <label for="inputAddress2">Address</label>
-            <input type="text" class="form-control" id="inputAddress2" placeholder="1234 Main St" >
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="password" required>
           </div>
-          <div class="form-row">
-            <div class="form-group col-md-6">
-              <label for="inputCity">City</label>
-              <input type="text" class="form-control" id="inputCity" placeholder="(Nantes for example)" >
-            </div>
-            <div class="form-group col-md-6">
-              <label for="inputState">State</label>
-              <select id="inputState" class="form-control">
-                <option selected>Choose...</option>
-                <option>...</option>
-              </select>
-            </div>
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
           </div>
-          <button type="submit" class="submit" >Sign in</button>
+          <button class=" button">Submit</button>
         </form>
       </div>
     </div>
+  </section>
 </template>
 
 <script>
+
 export default {
-  name: "Home_page"
+  name: "Home_page",
+
 }
 </script>
 
 <style scoped>
-template{
+
+section {
   width: 100%;
   height: 100%;
-  background: url("https://www.corsicasporttravel.com/photo/art/grande/9347881-14952089.jpg?v=1461310046") no-repeat;
+  background-image: url("https://i.ytimg.com/vi/LWPt5xv6ydA/maxresdefault.jpg") ;
   background-size: cover;
   color: white;
-
 }
 .wrapper{
   display:table;
@@ -78,85 +54,48 @@ template{
   vertical-align: middle;
 
 }
+h1 {
+
+  margin: 30px;
+  font-size: 2em;
+  font-family: 'Roboto', sans-serif;
+}
+/* formumaire*/
+
 form {
-  width: 600px;
-  height: 500px;
+  width: 300px;
+  height: 400px;
   margin: auto;
   background-color: black;
+  border-radius: 10px ;
   padding: 20px;
+  margin-bottom: 10%;
+  margin-top: 10%;
   background: rgba(0,0,0,0.75);
+
 }
 
-
-
 button {
-  margin: 10px;
+  background-color: orangered;
   text-decoration: none;
   border: none;
   color: white;
   border-radius: 3px;
   min-height: 35px;
-  width: 50%;
-}
-/*boutton couleur formulaire inscription*/
-.submit {
-  background-color: orangered;
-}
-
-.button-inscription button{
-  width: 300px ;
-}
-.button-inscription{
-  width: 600px;
-  margin: auto;
-  background-color: black;
-  padding: 20px;
-  background: rgba(0,0,0,0.75);
-
+  width: 100%;
 
 }
-
-
-.btn-fb{
-  background-color: #285E8E;
+form label .login {
+  font-family: 'Bebas Neue', cursive;
 }
-.btn-go{
-  background-color: white;
-}
-.btn-go h6{
-  color: #272626;
-}
-.btn-fb img {
-  height: 35px;
-  padding: 5px;
-
-}
-.btn-go img{
-  height: 35px;
-  padding: 5px;
-}
-
 input {
   background-color: black;
-}
 
-p {
+
+}
+.login p{
   font-family: 'Bebas Neue', cursive;
   font-size: 35px;
   color: orangered;
-}
-select {
-  background-color: black;
-}
-
-@media (max-width: 770px) {
-  form {
-    width: 600px;
-    height: 700px;
-    margin: auto;
-    background-color: black;
-    padding: 20px;
-    background: rgba(0,0,0,0.75);
-  }
 }
 </style>

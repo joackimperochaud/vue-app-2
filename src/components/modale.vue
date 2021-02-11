@@ -1,10 +1,10 @@
 <template>
-  <P> COUCOU</P>
+  <div></div>
 </template>
 
 <script>
 export default {
-name: "modale"
+  name: "modale"
 }
 </script>
 

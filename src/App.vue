@@ -47,29 +47,6 @@
             </div>
           </div>
 
-
-          <div class="footer-icon">
-            <div id="conteneur" >
-              <div class="img 1">
-                <a href="https://fr-fr.facebook.com/Strava/">
-                  <img src="assets/facebook.png">
-                </a>
-              </div>
-
-              <div class="img 2">
-                <a href="https://twitter.com/strava?lang=fr">
-                  <img src="assets/twitter.png">
-                </a>
-              </div>
-
-              <div class="img 3">
-                <a href="https://github.com/login">
-                  <img src="assets/instagram.png">
-                </a>
-              </div>
-            </div>
-          </div>
-
           <div class="footer-bottom">
             <li>&copy; 2020 Copyright Nowrap Inc.</li>
           </div>
@@ -83,29 +60,25 @@
 
 <script>
   import Navbar from "@/components/navbar";
+
   export default {
     name: 'app',
-    components : {Navbar}
+    components : { Navbar}
   }
 </script>
 
 <style>
 
-footer .footer{
+footer .footer {
   background: gray;
   color: white;
-  position: relative;
+  width: 100%;
   border-top: 10px solid orangered;
 
 
-}
 
-.footer .footer-icon{
-  background: gray;
-  height:60px ;
 
 }
-
 .footer .footer-bottom{
   background: #272626;
   color: white;
@@ -116,7 +89,7 @@ footer .footer{
 
 }
 
-#conteneur{
+.conteneur{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

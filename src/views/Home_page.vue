@@ -4,11 +4,13 @@
     <div class="wrapper">
       <div class="content">
         <h1>L'application  pour les coureurs et les cyclistes !</h1>
-        <form>
-          <label class="login"><p>connexion</p></label>
+        <form id ="form" @submit="checkForm" action="/something" method="post">
+
+
+          <label class="login"><p>connexion </p></label>
           <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" img="" required>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
           </div>
           <div class="form-group">
@@ -17,9 +19,9 @@
           </div>
           <div class="form-group form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            <label class="form-check-label" for="exampleCheck1" >Check me out</label>
           </div>
-          <button class=" button">Submit</button>
+          <button  @click= "$router.push('Enregistrement')" class=" button">Submit</button>
         </form>
       </div>
     </div>
@@ -30,7 +32,6 @@
 
 export default {
   name: "Home_page",
-
 }
 </script>
 
@@ -47,6 +48,7 @@ section {
   display:table;
   width: 100%;
   height: 100%;
+
 }
 .content {
   display: table-cell;
@@ -69,8 +71,7 @@ form {
   background-color: black;
   border-radius: 10px ;
   padding: 20px;
-  margin-bottom: 10%;
-  margin-top: 10%;
+  margin-bottom:50px;
   background: rgba(0,0,0,0.75);
 
 }
@@ -90,7 +91,6 @@ form label .login {
 }
 input {
   background-color: black;
-
 
 }
 .login p{

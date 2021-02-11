@@ -7,10 +7,10 @@
         <form id ="form" @submit="checkForm" action="/something" method="post">
 
 
-          <label class="login"><p>connexion </p></label>
+          <label class="login"><p>connexion {{message}} </p></label>
           <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <input v-model="message" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
           </div>
           <div class="form-group">
@@ -21,7 +21,7 @@
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
             <label class="form-check-label" for="exampleCheck1" >Check me out</label>
           </div>
-          <button  @click= "$router.push('Enregistrement')" class=" button">Submit</button>
+          <button   type ="Submit" @click= "$router.push('Enregistrement')" class=" button">Submit</button>
         </form>
       </div>
     </div>
